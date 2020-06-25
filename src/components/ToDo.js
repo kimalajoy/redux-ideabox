@@ -1,10 +1,12 @@
-import React from 'react';
+import React from "react";
 
-
-const ToDo = ({id, text, completed}) => {
-  return (
-    <li>{text}</li>
-  )
-}
+const ToDo = ({ id, todo, completed, toggleCompleted }) => {
+  return <li 
+  onClick={() => toggleCompleted(id)}
+  className={completed ? 'completed' : 'not-completed'}
+  >
+  {todo}
+  </li>;
+};
 
 export default ToDo;
